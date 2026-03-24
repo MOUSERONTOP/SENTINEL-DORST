@@ -1,0 +1,1254 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Sentinel - Dorset County",
+	Text = "Loading cheat...",
+	Icon = "http://www.roblox.com/asset/?id=10637290374",
+	Duration = 10
+})
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Sentinel - Dorset County",
+	Text = "Majobe Is Gay 🌈",
+	Icon = "http://www.roblox.com/asset/?id=10637290374",
+	Duration = 10
+})
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Sentinel - Dorset County",
+	Text = "Eis Is Gay 🌈 and a Sh1t developer",
+	Icon = "http://www.roblox.com/asset/?id=10637290374",
+	Duration = 10
+})
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Sentinel - Dorset County",
+	Text = "Chudders Wanked On A Bus",
+	Icon = "http://www.roblox.com/asset/?id=10637290374",
+	Duration = 10
+})
+
+
+local Plr = game.Players.LocalPlayer
+
+local Window = Rayfield:CreateWindow({
+	Name = "Sentinel",
+	Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+	LoadingTitle = "WELCOME TO SENTINEL",
+	LoadingSubtitle = "Loading...",
+	ShowText = "WELCOME TO SENTINEL", -- for mobile users to unhide rayfield, change if you'd like
+	Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+	ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+	DisableRayfieldPrompts = false,
+	DisableBuildWarnings = true, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = FileName, -- Create a custom folder for your hub/game
+		FileName = "SentinelData"
+	},
+
+	Discord = {
+		Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+		Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+		RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+	},
+
+	KeySystem = false, -- Set this to true to use our key system
+	KeySettings = {
+		Title = "Sentinel By Mouser",
+		Subtitle = "Key System",
+		Note = "Welcome, please enter the correct key to continue.", -- Use this to tell the user how to get a key
+		FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+		SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = {"SentinelThaBest"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+	}
+})
+
+local main_tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+
+local Section = main_tab:CreateSection("Welcome to Sentinel")
+
+local plr_tab = Window:CreateTab("Player", 4483362458) -- Title, Image
+
+local teleports_tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
+
+local carspawner_tab = Window:CreateTab("Vehicles", 4483362458) -- Title, Image
+
+local visuals_tab = Window:CreateTab("Visuals", 4483362458) -- Title, Image
+
+local universal_tab = Window:CreateTab("Universal", 4483362458) -- Title, Image
+
+local Section = main_tab:CreateSection("ChatAd: SENTINEL IS THE BEST CHEAT FOR DORSET COUNTY")
+
+local Divider = main_tab:CreateDivider()
+
+local Section = main_tab:CreateSection("Currently Supported Executors: JJSploit / Solara - Unsure about any other executors")
+
+local Divider = main_tab:CreateDivider()
+
+local Section = main_tab:CreateSection("Client Status: 🟢")
+
+local Button = main_tab:CreateButton({
+	Name = "KILL UI",
+	Callback = function()
+		if game.Workspace:FindFirstChild("Hhint") then
+			game.Workspace:FindFirstChild("Hhint"):Destroy()
+		end
+		Rayfield:Destroy()
+	end,
+})
+
+local Button = main_tab:CreateButton({
+	Name = "REJOIN",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/MOUSERONTOP/Rejoin/refs/heads/main/RejoinServer"))()
+	end,
+})
+
+-- Teleport Buttons
+
+local Button = teleports_tab:CreateButton({
+	Name = "Teleport to claimed House",
+	Callback = function()
+		local ClamHouse = game.Workspace.ClaimHouse:GetChildren()
+		for i, v in pairs(ClamHouse) do
+			if v:FindFirstChild("BillboardGui") then
+				if v.BillboardGui:FindFirstChild("TextLabel") then
+					if v.BillboardGui.TextLabel.Text == Plr.Name then
+						Plr.Character:MoveTo(v.Position)
+					end
+				end
+			end
+		end
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Dominos Outside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1095.8936767578125, 64.67829132080078, 396.34149169921875))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Dominos Inside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1120.2686767578125, -122.69189453125, 408.1175842285156))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Fire Station Outside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1290.5963134765625, 58.099422454833984, -266.8458251953125))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Fire Station Inside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1249.3924560546875, -94.196044921875, -222.07070922851562))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "St John Hospital Outside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-730.5381469726562, 56.60245132446289, -486.97528076171875))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "St John Hospital Inside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-723.2255859375, -146.5872344970703, -457.65264892578125))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Liko Outside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1288.4765625, 58.743202209472656, -643.0552978515625))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Liko Inside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1273.10302734375, -228.19483947753906, -650.8002319335938))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Police Outside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-730.222900390625, 46.57662582397461, -859.8311157226562))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Police Inside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-745.3912963867188, -212.74513244628906, -1065.90966796875))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Police Inside Restricted",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-758.1997680664062, -212.74513244628906, -1041.0240478515625))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Red Bus Depot Outside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-5499.21337890625, 14.926145553588867, -7397.80517578125))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Red Bus Depot Inside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-5536.1064453125, -160.75982666015625, -7388.134765625))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Hine Motors Paint Shop",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1915.3199462890625, 58.66624450683594, 59.09703063964844))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Hine Motors Inside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1875.486572265625, 58.946964263916016, 27.893457412719727))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Hine Motors Outside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1876.510009765625, 58.66624450683594, -33.19276809692383))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Tesco Petrol Station Outside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1740.5556640625, 51.471900939941406, -848.499267578125))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Tesco Petrol Station Inside",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1756.3953857421875, -339.813720703125, -856.1276245117188))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Construction Site",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-3864.626220703125, 18.00525665283203, -3549.304931640625))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Car Park Spawn",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-4217.77734375, 19.96110725402832, -3373.435302734375))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Broken Caravan Site",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-4351.03369140625, 22.007970809936523, -3332.907470703125))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Allotment Gardens",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-4585.48876953125, 20.708805084228516, -3330.392578125))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Dirt Car Park",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-4660.869140625, 27.470609664916992, -2975.72314453125))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Cow Barn",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-4130.056640625, 17.757488250732422, -4021.43701171875))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Saxon Grange",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-3368.94873046875, 22.329687118530273, -3530.347900390625))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Farm house",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-3399.085693359375, 20.763172149658203, -3885.130859375))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Nice House",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-3176.93701171875, 19.492584228515625, -3538.114013671875))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Random Barn",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-3090.486328125, 16.71953773498535, -3430.016845703125))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Skate Park",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-912.5364379882812, 60.25779342651367, 19.993196487426758))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Pool",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-715.0615234375, 55.77273941040039, -384.2442321777344))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "HalfMoon",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-2608.624267578125, 19.260589599609375, -2970.25244140625))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Royal Chase Hotel",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-2545.1455078125, 24.217241287231445, -2519.20703125))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "FootBall Field",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1568.6861572265625, 53.20871353149414, -1043.31494140625))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "KFC",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1054.5595703125, 66.74828338623047, 619.7166748046875))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Longmead Vets",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1078.0338134765625, 60.85538101196289, 43.78597640991211))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Paint Shop",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1689.60888671875, 61.456626892089844, 53.01268005371094))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Shaftesbury School Road",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1174.71337890625, 57.281532287597656, -263.5372009277344))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Interrior House 1",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1141.3914794921875, 57.722373962402344, -235.41529846191406))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Interrior House 2",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1121.3570556640625, 58.606502532958984, -267.74658203125))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Interrior House 3",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1091.3609619140625, 58.35414123535156, -293.7512512207031))
+	end,
+})
+
+local Button = teleports_tab:CreateButton({
+	Name = "Interrior House 4",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-1016.6945190429688, 57.88473129272461, -328.7005920410156))
+	end,
+})
+
+local Divider = teleports_tab:CreateDivider()
+
+local Section = teleports_tab:CreateSection("Christmas Update")
+
+local Divider = teleports_tab:CreateDivider()
+
+local Button = teleports_tab:CreateButton({
+	Name = "Christmas Tree Farm",
+	Callback = function()
+		Plr.Character:MoveTo(Vector3.new(-5681.93994140625, 14.918641090393066, -5785.67626953125))
+	end,
+})
+
+local Divider = teleports_tab:CreateDivider()
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+local Slider = plr_tab:CreateSlider({
+	Name = "WalkSpeed",
+	Range = {0, 250},
+	Increment = 1,
+	Suffix = "Max is 250",
+	CurrentValue = 16,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+		Plr.Character:FindFirstChild("Humanoid").WalkSpeed =  Value
+	end,
+})
+
+local Button = plr_tab:CreateButton({
+	Name = "Reset WalkSpeed",
+	Callback = function()
+		Slider.CurrentValue = 16
+		Plr.Character:FindFirstChild("Humanoid").WalkSpeed = 16
+	end,
+})
+
+local Divider = plr_tab:CreateDivider()
+
+local JumpPOWSlider = plr_tab:CreateSlider({
+	Name = "JumpPower",
+	Range = {50, 250},
+	Increment = 1,
+	Suffix = "Max is 250",
+	CurrentValue = 50,
+	Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+		Plr.Character:FindFirstChild("Humanoid").UseJumpPower = true
+		Plr.Character:FindFirstChild("Humanoid").JumpPower =  Value
+	end,
+})
+
+local Button = plr_tab:CreateButton({
+	Name = "Reset JumpPower",
+	Callback = function()
+		JumpPOWSlider.CurrentValue = 50
+		Plr.Character:FindFirstChild("Humanoid").UseJumpPower = false
+		Plr.Character:FindFirstChild("Humanoid").JumpPower =  50
+	end,
+})
+
+local Divider = plr_tab:CreateDivider()
+
+local Button = plr_tab:CreateButton({
+	Name = "ResetChar",
+	Callback = function()
+		Plr.Character:FindFirstChild("Humanoid").Health -= 10000
+	end,
+})
+
+local Divider = plr_tab:CreateDivider()
+
+local Toggle = plr_tab:CreateToggle({
+	Name = "Freeze Character",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+		if Value == true then
+			Plr.Character:FindFirstChild("Humanoid").WalkSpeed = 0
+			Plr.Character:FindFirstChild("Humanoid").UseJumpPower = true
+			Plr.Character:FindFirstChild("Humanoid").JumpPower =  0
+		else
+			Plr.Character:FindFirstChild("Humanoid").WalkSpeed = 16
+			Plr.Character:FindFirstChild("Humanoid").UseJumpPower = true
+			Plr.Character:FindFirstChild("Humanoid").JumpPower =  50
+		end
+	end,
+})
+
+local Section = plr_tab:CreateSection("Note: You can use *ResetChar* to respawn if your roblox coregui isn't working.")
+
+local Divider = plr_tab:CreateDivider()
+
+
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+local Input = carspawner_tab:CreateInput({
+	Name = "Control any players car",
+	CurrentValue = "",
+	PlaceholderText = "Type player name - AccountName not Display",
+	RemoveTextAfterFocusLost = false,
+	Flag = "Input5",
+	Callback = function(Text)
+		if game.Players:FindFirstChild(Text) then
+			local Wrk = game.Workspace:GetChildren()
+			for i, v in pairs(Wrk) do
+				if v:IsA("Model") then
+					if v.Name == Text.."sCar" then
+						local GuiC = v:FindFirstChild("A-Chassis Tune"):WaitForChild("A-Chassis Interface"):Clone()
+						GuiC:FindFirstChild("Security"):Destroy()
+						GuiC.Parent = Plr.PlayerGui
+					end
+				end
+			end
+		end
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Wipe all vehicle controls",
+	Callback = function()
+		local Gk = Plr.PlayerGui:GetChildren()
+		for i, v in pairs(Gk) do
+			if v:IsA("ScreenGui") then
+				if v.Name == "A-Chassis Interface" then
+					v:Destroy()
+				end
+			end
+		end
+	end
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Control All Vehicles!",
+	Callback = function()
+		local Wrk = game.Workspace:GetChildren()
+
+		for i, v in pairs(Wrk) do
+			if v:IsA("Model") then
+				if v:FindFirstChild("DriveSeat") then
+					local GuiC = v:FindFirstChild("A-Chassis Tune"):WaitForChild("A-Chassis Interface"):Clone()
+					GuiC:FindFirstChild("Security"):Destroy()
+					GuiC.Parent = Plr.PlayerGui
+				end
+			end
+		end
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Remote Control Car",
+	Callback = function()
+		if game.Workspace:FindFirstChild(Plr.Name.."sCar") then
+			if game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("A-Chassis Tune") then
+				if game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("A-Chassis Tune")["A-Chassis Interface"] then
+					local GUIC = game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("A-Chassis Tune")["A-Chassis Interface"]:Clone()
+					GUIC:FindFirstChild("Security"):Destroy()
+					GUIC.Parent = Plr.PlayerGui
+				end
+
+			end
+
+		end
+	end,
+})
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Hide Driver ProximityPrompt",
+	Callback = function()
+		if game.Workspace:FindFirstChild(Plr.Name.."sCar") then
+			if game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("DriveSeat") then
+				if game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("DriveSeat")["ProximityPrompt"] then
+					game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("DriveSeat")["ProximityPrompt"].Enabled = false
+				end
+
+			end
+
+		end
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Input = carspawner_tab:CreateInput({
+	Name = "Teleport to any players car",
+	CurrentValue = "",
+	PlaceholderText = "Type player name - AccountName not Display",
+	RemoveTextAfterFocusLost = false,
+	Flag = "Input5",
+	Callback = function(Text)
+		if game.Players:FindFirstChild(Text) then
+			local Wrk = game.Workspace:GetChildren()
+			for i, v in pairs(Wrk) do
+				if v:IsA("Model") then
+					if v.Name == Text.."sCar" then
+						Plr.Character:MoveTo(v.DriveSeat.Position)
+					end
+				end
+			end
+		end
+	end,
+})
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Teleport To Car",
+	Callback = function()
+		if game.Workspace:FindFirstChild(Plr.Name.."sCar") then
+			Plr.Character:MoveTo(game.Workspace:FindFirstChild(Plr.Name.."sCar").DriveSeat.Position)
+		end
+	end,
+})
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Bring Car To Player",
+	Callback = function()
+		if game.Workspace:FindFirstChild(Plr.Name.."sCar") then
+			game.Workspace:FindFirstChild(Plr.Name.."sCar"):MoveTo(Plr.Character.HumanoidRootPart.CFrame.Position)
+		end
+	end,
+})
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Bring Car To Paint Shop",
+	Callback = function()
+		if game.Workspace:FindFirstChild(Plr.Name.."sCar") then
+			game.Workspace:FindFirstChild(Plr.Name.."sCar"):MoveTo(Vector3.new(-1676.801025390625, 61.70620346069336, 32.692108154296875))
+		end
+	end,
+})
+
+local Section = carspawner_tab:CreateSection("Note: *Bring Car To Player* Doesn't always work.")
+
+local Section = carspawner_tab:CreateSection("Note: *Bring Car To Paint Shop* Doesn't always work.")
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1965 Lion Bamford DB5",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1965 Lion Bamford DB5")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1969 MG GT",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1969 MG GT")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1970 Bored Escort",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1970 Bored Escort")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1971 Mustang Mach 1 Bottom gear",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1971 Mustang Mach 1 Bottom gear")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1973 Movis P5B",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1973 Movis P5B")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1978 Bored Transit Dog",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1978 Bored Transit Dog")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1980 Bottom Gear Coen CX",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1980 Bottom Gear Coen CX")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1985 Land Loader Defender",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1985 Land Loader Defender")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1985 Raunt 11 Turbo",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1985 Raunt 11 Turbo")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1989 Bored Fiesta",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1989 Bored Fiesta")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1989 Bored Fiesta S",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1989 Bored Fiesta S")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1989 Bored Fiesta XR2",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1989 Bored Fiesta XR2")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1993 Versa Supra",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1993 Versa Supra")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1993 Versa Supra BG",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1993 Versa Supra BG")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1995 Carlton Tigra",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1995 Carlton Tigra")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1995 Carlton Tigra Easter 2025",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1995 Carlton Tigra Easter 2025")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "1998 Land Loader Range Loader",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("1998 Land Loader Range Loader")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2000 TBE Tuscan",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2000 TBE Tuscan")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2001 BTM 320d",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2001 BTM 320d")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2002 Bored Focus",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2002 Bored Focus")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2002 Raunt Avantime",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2002 Raunt Avantime")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2003 Carlton Zafira",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2003 Carlton Zafira")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2004 Bored Mondeo",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2004 Bored Mondeo")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2005 BTM 3 Series Convertible",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2005 BTM 3 Series Convertible")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2005 Bored Fiesta",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2005 Bored Fiesta")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2008 Bass 9-3 Aero Estate",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2008 Bass 9-3 Aero Estate")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Bottom Gear P45",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("Bottom Gear P45")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Ecto1",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("Ecto1")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Kuga RPU POLICE",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("Kuga RPU POLICE")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Corolla RPU POLICE",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("Corolla RPU POLICE")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "308 RPU POLICE",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("308 RPU POLICE")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "308 Unmarked RPU POLICE",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("308 Unmarked RPU POLICE")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2018 BTM 5 series M Sport POLICE",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2018 BTM 5 series M Sport POLICE")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2022 Bored Transit Custom Fleet",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2022 Bored Transit Custom Fleet")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Posh Panerama",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2012 Posh Panerama")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2014 Land Loader Discovery 4",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2014 Land Loader Discovery 4")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2024 FAF XG+",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2024 FAF XG+")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2023 Vioci S Way",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2023 Vioci S Way")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2011 Land Loader Freelander",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2011 Land Loader Freelander")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "Freelander Panda Car",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("Freelander Panda Car")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2011 Land Loader Freelander HSE",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2011 Land Loader Freelander HSE")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2025 Pandora CLA",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2025 Pandora CLA")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2012 Vlo S60",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2012 Vlo S60")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2019 BTM i3",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2019 BTM i3")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2016 Happi Bin Lorry",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2016 Happi Bin Lorry")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+	Name = "2015 Plume Poote Wraith",
+	Callback = function()
+		game.ReplicatedStorage.SpawnCar:FireServer("2015 Plume Poote Wraith")
+	end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+local Button = universal_tab:CreateButton({
+	Name = "A-Chassis 6 Tuner",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Documantation12/Universal-Vehicle-Script/main/Main.lua'))()
+
+	end,
+})
+
+local Button = universal_tab:CreateButton({
+	Name = "Owl Hub Aimbot",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+
+	end,
+})
+
+local Button = universal_tab:CreateButton({
+	Name = "Sussy Animations",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ramonnew199-lgtm/EXED/refs/heads/main/SusANIMS"))()
+	end,
+})
+
+local Button = universal_tab:CreateButton({
+	Name = "Infinite Yield",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+	end,
+})
+
+local Button = universal_tab:CreateButton({
+	Name = "cmd admin commands",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/cmd/main/main.lua"))()
+	end,
+})
+
+local Button = universal_tab:CreateButton({
+	Name = "Fling All",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/zqyDSUWX"))()
+	end,
+})
+
+local Divider = universal_tab:CreateDivider()
+
+local Button = universal_tab:CreateButton({
+	Name = "MULTI-FLING",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/K1LAS1K/Ultimate-Fling-GUI/main/flingscript.lua"))()
+	end,
+})
+
+------------------------------
+----------------------------------
+-----------------------------------------
+
+local Toggle = visuals_tab:CreateToggle({
+	Name = "ESP",
+	CurrentValue = false,
+	Flag = "ESPToggleOnOff", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+		if Value == true then
+			local Wrk = game.Workspace:GetChildren()
+			for i, v in pairs(Wrk) do
+				local ESPHigh = Instance.new("Highlight")
+				ESPHigh.FillColor = Color3.new(0.0313725, 1, 0.352941)
+				ESPHigh.OutlineColor = Color3.new(1, 1, 1)
+				ESPHigh.Name = "ESP"
+				ESPHigh.FillTransparency = 0.5
+				ESPHigh.OutlineTransparency = 0
+				ESPHigh.DepthMode = "AlwaysOnTop"
+				ESPHigh.Adornee = v
+				if v:FindFirstChild("HumanoidRootPart") then
+					ESPHigh.Parent = v
+				end
+			end
+		else
+			local Wrk = game.Workspace:GetChildren()
+			for i, v in pairs(Wrk) do
+				if v:FindFirstChild("ESP") then
+					v.ESP:Destroy()
+				end
+			end
+		end
+	end,
+})
+
+local Button = visuals_tab:CreateButton({
+	Name = "DEBUG ESP",
+	Callback = function()
+		local wrk = game.Workspace:GetChildren()
+		for i, v in pairs(wrk) do
+			if v:FindFirstChild("HumanoidRootPart") then
+				if v:FindFirstChild("ESP") then
+					v.ESP:Destroy()
+				end
+			end
+		end
+
+	end,
+})
+
+local Divider = visuals_tab:CreateDivider()
+
+local Button = visuals_tab:CreateButton({
+	Name = "Car ESP",
+	Callback = function()
+		local Wrk = game.Workspace:GetChildren()
+		for i, v in pairs(Wrk) do
+			if v:FindFirstChild("DriveSeat") then
+				if v:FindFirstChild("ESPsentinel") then
+					v.ESPsentinel:Destroy()
+					local ESP = Instance.new("Highlight")
+					ESP.OutlineColor = Color3.fromRGB(0, 123, 255)
+					ESP.FillColor = Color3.fromRGB(204, 1, 255)
+					ESP.FillTransparency = 0.5
+					ESP.Parent = v
+					ESP.Name = "ESPsentinel"
+					if v:FindFirstChild("Body"):FindFirstChild("ELS") then
+						local ESP = Instance.new("Highlight")
+						ESP.OutlineColor = Color3.fromRGB(0, 123, 255)
+						ESP.FillColor = Color3.fromRGB(0, 115, 255)
+						ESP.FillTransparency = 0.5
+						ESP.Parent = v
+						ESP.Name = "ESPsentinel"
+
+					end
+				else
+					local ESP = Instance.new("Highlight")
+					ESP.OutlineColor = Color3.fromRGB(0, 123, 255)
+					ESP.FillColor = Color3.fromRGB(204, 1, 255)
+					ESP.FillTransparency = 0.5
+					ESP.Parent = v
+					ESP.Name = "ESPsentinel"
+					if v:FindFirstChild("Body"):FindFirstChild("ELS") then
+						local ESP = Instance.new("Highlight")
+						ESP.OutlineColor = Color3.fromRGB(0, 123, 255)
+						ESP.FillColor = Color3.fromRGB(0, 115, 255)
+						ESP.FillTransparency = 0.5
+						ESP.Parent = v
+						ESP.Name = "ESPsentinel"
+
+					end
+				end
+
+			end
+		end
+		
+	end,
+})
+
+local Button = visuals_tab:CreateButton({
+	Name = "Debug Car ESP",
+	Callback = function()
+		local Wrk = game.Workspace:GetChildren()
+		for i, v in pairs(Wrk) do
+			if v:FindFirstChild("DriveSeat") then
+				if v:FindFirstChild("ESPsentinel") then
+					v.ESPsentinel:Destroy()
+			
+				end
+
+			end
+		end
+
+	end,
+})
+
+
+
+------------------------------
+----------------------------------
+-----------------------------------------
